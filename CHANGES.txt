@@ -5,6 +5,10 @@ CHANGES
 3.3.0 (unreleased)
 ------------------
 
+- Bugfix: The ``ChoiceTerms`` adapter blindly assumed that the passed in field
+  is unbound, which is not necessarily the case in interesting ObjectWidget
+  scenarios. Not it checks for a non-None field context first.
+
 - *MAJOR* overhaul of ObjectWidget:
 
   * low level unittests passed, but high level was not tops
